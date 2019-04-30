@@ -1,0 +1,109 @@
+/* ---------------------------------------------------------------------------------------------------- */
+/* Reset */
+li{
+  list-style: none;
+}
+a{
+  color: $color-e3;
+}
+a:hover{
+  text-decoration: none;
+}
+body{
+  font-family: $family-open !important; 
+  background-color: $color-f8;
+}
+.section-title{
+  h2{
+    @include text-format(28px,$black-color,700,$family-open);
+    @media screen and (max-width:1400px){
+      font-size: 24px;
+    }
+    @media screen and (max-width:992px){
+      font-size: 20px;
+    }    
+  }
+}
+p{
+    @include text-format(14px,$p-color,400,$family-open);
+}
+
+.custom-btn{
+  padding: 15px 40px;
+  @include text-format(14px,$white-color,700,$family-open);
+  background-color: $yellow;
+  @include radius(40px);
+  border:0 none;
+  .btn-size{
+    font-size: 18px;
+    margin-right: 5px;
+  }
+  @media screen and (max-width:1400px){
+    padding: 10px 30px;
+  }
+  &:hover{
+    background-color: $black-color;
+  }
+  &.grey-btn{
+    background-color: $color-6e;
+    &:hover{
+      background-color: $black-color;
+    }
+  }
+}
+
+.custom-form{
+  .form-group{  
+    input.form-control{
+      border-radius:0;
+      border-left:0 none;
+      border-right:0 none;
+      border-top:0 none;
+      padding-left: 0;
+      margin-top: 20px;
+      &:focus{
+        border-left: 0 none !important;
+      }
+      @media screen and (max-width:992px){
+        font-size: 14px;
+      }
+    }                            
+  }     
+}
+.custom-pagination{
+  .pagination{
+    .page-item {
+      margin: 0 2px;
+      @include radius(4px);
+      overflow: hidden;
+      &.active{
+        .page-link {
+          background: #646464;
+          color:$white-color;
+        }
+      }
+      .page-link {
+        line-height: 1.25;
+        color: #717171;       
+        background: #f2f2f2; 
+        background: -moz-linear-gradient(top, #f2f2f2 0%, #e0e0e0 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #f2f2f2 0%,#e0e0e0 100%); 
+        background: linear-gradient(to bottom, #f2f2f2 0%,#e0e0e0 100%); 
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#e0e0e0',GradientType=0 );
+        border: 1px solid #ddd;        
+      }
+    }
+  }
+}
+
+.form-control:focus{
+   border-color: $black-color !important;
+    @include box-shadow-none();
+}
+
+.custom-modal{
+  .modal-content{
+    border: 0 none;
+    @include radius(0px);
+  }
+}

@@ -1,0 +1,36 @@
+.main-innerpage{ 
+	.inner-content-page{
+		.shop-detail{
+			@media screen and (max-width:1200px){
+				padding: 0;
+			}
+			h3{
+				@media screen and (max-width:1400px){
+					margin: 0 0 10px 0;
+				}
+			}
+			.from-group{	
+				@media screen and (max-width:1400px){
+					margin-bottom: 10px;	
+				}
+				label{
+					&.custom-label{
+						@media screen and (max-width:1400px){
+							font-size:14px;
+							@include margin-bottom(5);
+						}
+					}
+				}	
+				p{
+					&.input-data{
+						@media screen and (max-width:1400px){
+							@include padding-bottom(5);
+						}
+					}
+				}			
+			}
+		}
+		.slidershop-outer{		
+		}
+	}
+}

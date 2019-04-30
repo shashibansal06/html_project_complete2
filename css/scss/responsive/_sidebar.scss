@@ -1,0 +1,65 @@
+.main-innerpage{
+	.sidebar{
+		.sidemenu{
+			@media screen and (max-width:767px){
+				display: block;	
+			}
+		}
+		.user-info{
+			@media screen and (max-width:1400px){
+				padding: 40px 0;
+			}
+			@media screen and (max-width:992px){
+				padding: 30px 0;
+			}
+			.user-img{
+				@media screen and (max-width:1400px){
+					@include square(120px);
+				}
+				@media screen and (max-width:992px){
+					@include square(100px);
+				}
+				.upload-btn{
+					&:before {
+						@media screen and (max-width:992px){
+							@include pos(a,0px 0 auto auto);
+						    font-size: 24px;
+						    border: 2px solid $white-color;		    
+						    @include square(30px);
+						    line-height: 24px;	 
+					    }   
+					}									
+				}
+			}
+			h3{	
+				@media screen and (max-width:1400px){
+					font-size: 16px;
+					margin-bottom: 5px;
+					margin-top: 15px;	
+				}		
+			}
+			h4{
+				@media screen and (max-width:1400px){
+					font-size: 14px;					
+				}				
+			}
+		}
+		.sidenav{ 
+			@media screen and (max-width:767px){
+				display: none;
+			}
+			ul{
+				li{				
+					a{
+						@media screen and (max-width:1400px){
+							padding: 20px 25px;
+						}	
+						@media screen and (max-width:992px){
+							padding:15px 20px;
+						}						
+					}				
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,32 @@
+.main-innerpage{
+	.white-layer{
+		&.contact-page{
+			padding: 0;
+			.contact-form{
+				.contact-form-inner{
+					padding:40px 40px 40px 15px;
+					input,textarea{
+						border-radius:0;
+						border-left:0 none;
+						border-right:0 none;
+						border-top:0 none;
+						padding-left: 0;
+						margin-top: 25px;
+						&[type="submit"]{
+							padding: 15px 40px;
+							@include text-format(14px,$white-color,700,$family-open);
+							background-color: $yellow;
+							@include radius(40px);
+							&:hover{
+							    background-color: $black-color;
+							}
+						}
+					}
+					textarea{
+						min-height: 100px;
+					}
+				}
+			}
+		}
+	}
+}

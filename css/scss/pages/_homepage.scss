@@ -1,0 +1,221 @@
+.banner{
+	@include height-width(100vh,100%);
+	background:{
+		image:url('../images/banner-img.jpg');
+		repeat:no-repeat;
+		size:cover;
+	}
+	@media screen and (max-width:$ptablet){
+		height:auto;
+	}
+	.container{
+		height:100vh;
+		@include pos(r,null);
+	}
+	.banner-outer{
+		@include height-width(100vh,100%);
+		.banner-inner{	
+			p{
+				@include text-format(24px,$white-color,400,$family);
+				line-height: 43px;
+				margin-bottom: 128px;
+			}
+			.input-group input.form-control{
+	        border: 0 none;
+	        color:$white-color;
+	        @include box-shadow-n(0, 6px, 9px, rgba(0,0,0,0.3) inset); 
+	        background-color: rgba(0,0,0,0.3);
+	        padding: 20px 25px;
+	        border-top-left-radius: 40px;
+	        border-bottom-left-radius: 40px;
+	        }
+	        .input-group-btn button{
+	        cursor: pointer;
+	        font-size: 26px;
+	        width: 94px;
+	        border-top-right-radius: 40px;
+	        border-bottom-right-radius: 40px;
+	        background: rgb(202,119,2);
+	        background: -moz-linear-gradient(top, rgba(202,119,2,1) 0%, rgba(212,143,2,1) 100%);
+	        background: -webkit-linear-gradient(top, rgba(202,119,2,1) 0%,rgba(212,143,2,1) 100%);
+	        background: linear-gradient(to bottom, rgba(202,119,2,1) 0%,rgba(212,143,2,1) 100%); 
+	        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ca7702', endColorstr='#d48f02',GradientType=0 ); 
+	        }		
+		}
+	}
+	.banner-bottom{
+		position: absolute;
+		bottom: -17px;
+		width: 100%;
+		left: 0;
+		text-align: center;	
+	}
+}
+.about-section{
+	background-color: $color-f9;
+	padding: 75px 0 60px;
+	.card{
+		background-color: $transparent-color;
+		.about-icon{
+			font-size: 40px;
+			.icon{
+				&::before{
+					color:$yellow;
+				}
+			}
+		}
+		.card-title{
+			@include text-format(16px,$black-color,700,$family-open);
+		}
+		.card-text{
+			line-height: 20px;
+			min-height: 120px;
+		}
+	}
+}
+.feature-section{
+	@include pos(r,null);
+	overflow: hidden;
+		&::before{
+			@include pos(a,0 auto auto -50%);
+			height:260px;
+			width: 330%;
+			background-color: $yellow;
+			content: '';
+			transform: rotate(155deg);
+		}
+	.feature-outer{		
+		h3{
+	    	@include text-format(24px,$black-color,700,$family-open);
+		}
+		ul{
+			padding: 0;
+			li{
+				@include text-format(14px,$black-color,400,$family-open);
+				margin-bottom:20px; 
+				@include pos(r,null);
+				padding-left: 25px;
+				&:before {
+					@include pos(a,0 auto auto 0);
+					font-family: 'icomoon';
+				    content: "\e905";
+				    color: $yellow;			    
+				}
+			}
+		}
+		.card{
+			background-color: $transparent-color;
+			box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+			.card-header{
+				padding:20px 30px;
+				background-color: $white-color;
+				@include pos(r,null);
+				&:before {
+					@include pos(a,calc(50% - 15px) 20px auto auto);
+					font-family: FontAwesome;
+				    content: "\f054";
+				    font-size: 20px;
+				    color: #d7d9dd;			    
+				}
+				h5{
+					a{
+						@include text-format(14px,$black-color,400,$family-open);
+					}
+				}
+			}
+			.collapse{
+				.card-block{
+
+				}
+			}
+		}
+	}
+}
+.video-section{
+	background-color: $yellow;
+	.section-title{
+	  h2{
+	    color:$white-color;
+	  }
+	  p{
+	    color:$white-color;
+	  }
+	}
+	.video-outer {
+	    bottom: -20px;
+	    position: relative;
+	    margin-bottom: -300px;
+	    border:4px solid $yellow;
+	    @include radius(4px);
+	}
+}
+
+.customer-review{
+	background-color: $color-f9;
+	margin-top: 460px;
+	padding:75px 0 75px 0;
+	.card{
+		background-color: $transparent-color;
+		.card-inner{
+			background-color: $grey-color;
+			padding-bottom: 50px;
+			.card-body{
+				p{
+					@include text-format(16px,$white-color,400,$family-open);
+				}
+			}			
+		}
+		&:nth-child(2n){
+			.card-inner{
+				background-color: $yellow;
+			}
+		}
+		.customer-img{
+			@include text-format(15px,$black-color,300,$family-open);
+			.avatar{
+				float: left;
+				@include square(118px);
+				border: 8px solid $color-e3;				
+				overflow: hidden;
+				margin: -35px 20px 0 20px;
+				img{
+					min-width: 118px;
+					min-height: 118px;
+					max-width: 100%;
+					object-fit: cover;
+				}
+			}
+			h2{
+				font-size: 15px;
+				font-weight: 700;
+				margin-top: 20px;
+			}
+			h3{
+				font-size: 15px;
+			}
+		}
+	}
+}
+.premium-partner{
+	padding: 125px 0;
+	background-color: $white-color;
+	.slider-outer{
+		padding: 40px 0;
+		.slilder-itm{
+			height: 100px;
+			margin: 0 10px;
+			border:1px solid $color-ee;
+			width: calc(20% - 20px);
+			text-align: center;
+			-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+	    	-moz-filter: grayscale(100%);
+	    	filter: grayscale(100%);
+			&:hover{
+				border-color: $yellow;
+				-webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+		    	-moz-filter: grayscale(0%);
+		    	filter: grayscale(0%);
+			}
+		}
+	}
+}

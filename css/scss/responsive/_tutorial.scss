@@ -1,0 +1,31 @@
+.main-innerpage{
+	.inner-content-page{
+		.right-section{
+			.about-section{
+				padding: 60px 0 60px;
+				.section-title{
+					h2{
+						font-size: 18px;
+					}
+				}				
+			}			
+			.video-section{	
+				@media screen and (max-width:767px){			
+					padding-bottom: 40px;
+				}
+				.section-title{
+					
+				}
+				.video-main-out{
+					.video-outer {
+						@media screen and (max-width:767px){
+					   	 	bottom: auto;
+							margin-bottom:0px;	
+						}				
+					}
+				}
+			}
+		}
+	}
+}
+

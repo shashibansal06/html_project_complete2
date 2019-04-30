@@ -1,0 +1,47 @@
+.footer{
+	@media screen and (max-width:1400px){			
+		padding: 40px 0;
+	}
+	@media screen and (max-width:992px){			
+		padding: 30px 0;
+	}
+	@media screen and (max-width:767px){			
+		padding: 20px 0;
+	}
+	img{
+		@media screen and (max-width:767px){	
+			width: 65px;
+		}
+	}
+	.foot-link{ 
+		li{
+			&.list-inline-item{	
+				@media screen and (max-width:992px){								
+					@include margin-left(10);	
+				}			
+				a{
+					@media screen and (max-width:992px){
+							font-size: 12px;			
+					}
+				}
+			}
+		}
+	}
+	.social-link{
+		li{
+			&.list-inline-item{	
+				a{
+					@media screen and (max-width:1400px){
+							font-size: 32px;			
+					}
+					@media screen and (max-width:992px){
+							font-size: 30px;			
+					}
+					@media screen and (max-width:767px){
+							font-size: 20px;			
+					}	
+				}
+			}
+		}
+	}
+}

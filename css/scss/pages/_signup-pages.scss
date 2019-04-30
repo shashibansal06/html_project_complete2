@@ -1,0 +1,176 @@
+.beforelogin {	
+	background-image: url(../images/login-bg.jpg);
+	@include bg_cover($size:cover, $position: top center, $repeat: no-repeat);	
+	height:100vh;
+	.before-container{
+		background-color:rgba(0,0,0,0.76);
+		min-width: 100%;
+			.login-form{
+				@include padding(55);
+				background-color: $white-color;
+				h2{
+					@include text-format(20px,$color-23,400,$family-open);
+					span{
+						color: $yellow;
+					}
+				}
+				.custom-form{
+					.form-group{	
+						input.form-control{
+						}		
+						label{
+							&.custom-label{
+								@include margin-bottom(15);
+							}
+						}
+						.forget-pswd{
+							@include text-format(14px,$color-6d,400,$family-open);
+						}						
+					}
+					p{
+						@include text-format(16px,$color-66,600,$family-open);
+						a{
+							color: $yellow;
+						}
+					}
+					.or-box{
+						@include text-format(16px,$color-66,600,$family-open);
+						span{
+							@include pos(r,null);
+							&:before{
+								@include pos(a,50% auto auto -170px);
+								height:1px;
+								width:164px;
+								background-color: #ededed;
+								content: '';								
+							}
+							&:after{
+								@include pos(a,50% -170px auto auto );
+								height:1px;
+								width:164px;
+								background-color: #ededed;
+								content: '';								
+							}
+						}
+					}
+					.social-buttons{
+						text-align: center;
+						a{
+							@include margin(0 7);
+							width:165px;
+							line-height: 46px;
+							display: inline-block;
+							i{
+								height:46px;
+								width:50px;
+								font-size: 16px;
+								line-height: 46px;
+							}
+							span{
+								font-size: 14px;
+								display: inline-block;
+								vertical-align: middle;
+								width:calc(165px - 50px);
+							}
+						}
+						.fb-btn{
+							background-color: #3b5998;
+							color: #fff;
+							i{
+								background-color: #354f88;
+							}
+						}
+						.google-btn{
+							background-color: #de4c34;
+							color: #fff;
+							i{
+								background-color: #ce3e26;
+							}
+						}
+					}	
+				}				
+			}		
+		}
+}      
+
+
+
+.radio-outer{
+    label{
+        &.z_radio{
+            @include pos(r, null);
+            font-size: 14px;
+            font-weight: 400;
+            color:$color-66;
+            @include margin-right(40);
+            span{
+                @include padding-left(25);
+                @include pos(r, null);
+                &:after {
+                @include pos(a, 7px auto auto 5px );
+                  content:none;
+                  @include square(10px);
+                  background-color: $yellow;                               
+                }
+                &:before {
+                  @include pos(a, 2px auto auto 0px );
+                  border:1px solid red; 
+                  content: "";      
+                  @include square(16px);
+                }
+            }
+            input[type="radio"]{
+                @include pos(a, 0px auto auto 0px );
+                visibility: hidden;
+                &:checked{
+                    &+ span{
+                        &:after{
+                            content:'';
+                        }
+                    }
+                }
+            }
+        }
+        &.z_checked{
+            @include pos(r, null);
+            font-size: 14px;
+            font-weight: 300;
+            color: $color-66;
+            @include margin-right(40);
+            span{
+                @include padding-left(25);
+                @include pos(r, null);
+                cursor: pointer;
+                &:after {
+                  @include pos(a, 2px auto auto 3px );
+                  content:'';
+                  color:white;
+                  font-family:FontAwesome;
+                  font-size:11px;
+                  border-radius:50%;
+                }
+                &:before {
+                  @include pos(a, 2px auto auto 0px);
+                  border:1px solid $yellow; 
+                  content: "";      
+                  @include square(16px);
+                  border-radius:50%;
+                }
+            }
+            input[type="checkbox"]{
+                @include pos(a, 0px auto auto 0px );
+                visibility: hidden;
+                &:checked{
+                    &+ span{
+                        &:after{
+                            content:"\f00c";
+                        }
+                        &:before{
+                            background-color:$yellow; 
+                        }
+                    }
+                }
+            }
+        }
+    }
+}  

@@ -1,0 +1,24 @@
+.main-innerpage{
+	.white-layer{
+		&.contact-page{
+			.contact-form{
+				.contact-form-inner{
+					@media screen and (max-width:767px){
+						padding:40px 15px 40px 15px;
+					}
+					input,textarea{
+						@media screen and (max-width:767px){
+							margin-top:15px;
+						}
+						&[type="submit"]{
+							@media screen and (max-width:767px){
+								padding: 10px 30px;
+								@include radius(30px);	
+							}						
+						}
+					}					
+				}
+			}
+		}
+	}
+}

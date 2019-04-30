@@ -1,0 +1,37 @@
+.footer{
+	padding: 65px 0;
+	background:{
+		color:$grey-color;		
+	}
+	.foot-link{ 
+		li{
+			&.list-inline-item{				
+				@include margin-left(22);
+				@include margin-right(0);
+				@include pos(r, null);
+				a{
+					@include text-format(14px,$color-e3,300,$family-open);
+					&:hover{
+						color: $yellow;
+					}
+				}
+			}
+		}
+	}
+	.social-link{
+		li{
+			&.list-inline-item{	
+				a{
+					@include text-format(49px,$color-e3,400,$family-open);
+					&:hover{
+						color: $yellow;
+					}				
+				}
+			}
+		}
+	}
+	p{
+		color:$color-b5;
+    	font-weight:300;
+	}
+}

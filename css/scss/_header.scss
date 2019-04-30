@@ -1,0 +1,67 @@
+header{
+	@include pos(f, 0px auto auto 0);
+	@include height-width(auto,100%);
+	z-index:9;
+	background-color: $header-yellow;
+	.container{
+		@include pos(r, null);
+	}
+	.logo{
+		width:310px;
+		@include pos(a, 0px auto auto 0);
+		background: $black-color;
+		height: calc(100% + 8px);
+		&::before {
+		    content: '';
+		    @include pos(a, auto auto 0px -8px);
+		    border-right: 9px solid black;
+		    border-bottom: 8px solid transparent;
+		}
+		&::after {
+		    content: '';
+		    @include pos(a, auto -8px 0px auto);
+		    border-left: 9px solid black;
+		    border-bottom: 8px solid transparent;
+		}
+	}
+	.menu-icon {
+		float: right;
+		font-size: 24px;
+		color: #000;
+		width: calc(100% - 220px);
+		text-align: right;
+		margin-top: 6px;
+		display: none;
+		span{
+			cursor: pointer;
+		}
+	}
+	nav{
+		text-align:right;
+		@include padding(38 0); 
+		.close-icon{
+			font-size: 36px;
+			position: absolute;
+			right: 20px;
+			top: 0;
+			cursor: pointer;
+			display: none;
+		}
+		ul{
+			li{
+				&.list-inline-item{
+					margin: 0;
+					a{
+						@include display(middle);
+						@include text-format(18px,$black-color,400,$family);
+						@include margin-left(65);
+						&:hover, &.active{
+							@include text-shadow(1px,0,0,$black-color);
+						}						
+					}
+				}
+			}
+		}
+	}
+}
+

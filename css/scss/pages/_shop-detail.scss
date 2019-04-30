@@ -1,0 +1,27 @@
+.main-innerpage{ 
+	.inner-content-page{
+		.shop-detail{
+			h3{
+				color: $black-color;
+				margin: 0 0 20px 0;
+			}
+			.from-group{	
+				margin-bottom: 15px;	
+				label{
+					&.custom-label{
+						@include text-format(16px,$color-6d,600,$family-open);
+						@include margin-bottom(15);
+					}
+				}	
+				p{
+					&.input-data{
+						@include padding-bottom(10);
+					}
+				}			
+			}
+		}
+		.slidershop-outer{
+			border-top:1px solid #f6f6f6;			
+		}
+	}
+}

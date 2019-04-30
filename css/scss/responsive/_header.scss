@@ -1,0 +1,70 @@
+header{	
+	@media screen and (max-width:$ptablet){
+		min-height:40px;
+	}
+	.container{		
+	}
+	.logo{
+		@media screen and (max-width:1400px){
+			width:235px;			
+		}
+		@media screen and (max-width:767px){
+			position: relative;
+			margin-bottom: -8px;	
+			padding: 5px 0;		
+			width: 160px;
+			margin-left: 15px;
+		}		
+		img{
+			@media screen and (max-width:767px){
+				max-width: 115px;
+			}
+		}
+	}
+	.menu-icon {
+		@media screen and (max-width:$ptablet){
+			display: block;
+		}		
+	}
+	nav{
+		@media screen and (max-width:1400px){
+			@include padding(27 0); 
+		}
+		@media screen and (max-width:$ptablet){
+			@include pos(f, 0px auto auto 0);
+			position: fixed !important;
+			@include height-width(100vh,100%); 
+			background-color:$yellow;
+			display: none;
+			z-index:9;
+		} 	
+		.close-icon{
+			@media screen and (max-width:$ptablet){
+				display: block;
+			}
+		}
+		ul{
+			li{
+				&.list-inline-item{
+					@media screen and (max-width:$ptablet){
+						width: 100%;
+					}
+					a{
+
+						@media screen and (max-width:1400px){
+							@include margin-left(40);
+						}
+						@media screen and (max-width:992px){
+							@include margin-left(20);
+						}
+						@media screen and (max-width:767px){
+							@include margin-left(0);
+							@include margin(10 0);							
+						}											
+					}
+				}
+			}
+		}
+	}
+}
+

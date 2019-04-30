@@ -1,0 +1,92 @@
+.beforelogin {	
+	height:100vh;
+	@media screen and (max-width:767px){
+		height:auto;
+		min-height: 100vh;
+	}
+	.before-container{
+		.logo-outer{
+			img{
+				@media screen and (max-width:767px){
+					max-width: 70px;
+					padding: 20px 0;
+				}
+			}
+		}
+		.login-form{
+			@media screen and (max-width:1400px){
+				@include padding(40);			
+			}
+			@media screen and (max-width:992px){
+				@include padding(20);			
+			}
+				h2{
+					@media screen and (max-width:992px){
+						font-size: 18px;
+					}					
+				}
+				.custom-form{
+					.form-group{	
+						input.form-control{
+							@media screen and (max-width:1400px){
+								margin-top: 15px;
+							}
+							@media screen and (max-width:992px){
+								margin-top: 10px;
+							}
+						}													
+					}
+					p{
+						@media screen and (max-width:1400px){
+							font-size:14px;
+						}						
+					}
+					.or-box{
+						@media screen and (max-width:1400px){
+							font-size:14px;
+						}	
+						span{
+							&:before{
+								@media screen and (max-width:992px){
+									left:-110px;
+									width:100px;
+								}								
+							}
+							&:after{
+								@media screen and (max-width:992px){
+									right:-110px;
+									width:100px;
+								}								
+							}
+						}
+					}
+					.social-buttons{
+						a{
+							@media screen and (max-width:1400px){
+								@include margin(0 5);
+								width:130px;
+								line-height: 40px;								
+							}
+							@media screen and (max-width:576px){
+								width:100%;
+								margin: 5px 0;
+							}
+							i{
+								@media screen and (max-width:1400px){
+									height:40px;
+									width:40px;
+									font-size: 14px;
+									line-height: 40px;
+								}
+							}
+							span{
+								@media screen and (max-width:1400px){
+									width:calc(165px - 40px);
+								}
+							}
+						}						
+					}	
+				}				
+			}		
+		}
+}      

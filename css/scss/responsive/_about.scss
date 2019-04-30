@@ -1,0 +1,35 @@
+.main-innerpage{
+	.inner-content-page{
+		&.about-page{
+			.about-list{
+				@media screen and (max-width:767px){
+					padding: 0;		
+				}
+				li{
+					@media screen and (max-width:1400px){
+						margin-bottom:20px; 
+						padding-left: 40px;
+					}
+					@media screen and (max-width:767px){
+						margin-bottom:15px; 
+						padding-left: 30px;
+					}
+					&:before {
+						@media screen and (max-width:767px){
+							font-size:24px;
+					    }
+					    @media screen and (max-width:767px){
+							font-size:20px;
+					    }		    
+					}
+				}
+			}
+			.our-vision{
+				@media screen and (max-width:767px){
+					padding:20px 15px;
+					margin: 0;
+				}			
+			}
+		}
+	}
+}

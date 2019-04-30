@@ -1,0 +1,38 @@
+.main-innerpage{
+	.inner-content-page{
+		&.about-page{
+			.about-list{
+				padding: 20px 0 0 0;			
+				li{
+					@include text-format(14px,$color-88,400,$family-open);
+					margin-bottom:30px; 
+					@include pos(r,null);
+					padding-left: 50px;
+					&:before {
+						@include pos(a,-2px auto auto 0);
+						font-family: 'icomoon';
+					    content: "\e900";
+					    color: #9c9c9c;	
+					    font-size: 33px;		    
+					}
+				}
+			}
+			p{
+				margin-bottom: 40px;
+			}
+			.our-vision{
+				background-color: $color-6b6a;
+				padding:40px 30px;
+				margin: 0 -15px;
+				h3{
+					color: $white-color;
+					margin-top:0; 
+				}
+				p{
+					color: $white-color;
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+}

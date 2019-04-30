@@ -1,0 +1,147 @@
+.main-innerpage{
+	margin:165px 30px 60px 30px;
+	max-width: calc(100% - 60px);
+	.inner-title{
+		@include text-format(16px,$black-color,600,$family-open);
+		@include margin(0);		
+	}
+	.white-layer{
+		background-color: $white-color;
+		/*@include box-shadow-n(0px,0px,10px, rgba(0,0,0,0.3)); */
+		@include radius(5px);
+		padding: 30px;	
+	}
+	.inner-content-page{
+		h3{
+			@include text-format(16px,$color-6d,600,$family-open);
+			@include margin-bottom(20);
+			@include margin-top(40);
+		}
+		p{
+			color: $color-88;
+			margin-bottom: 20px;
+		}		
+	}
+}
+
+.right-section{
+	.right-inner{
+		background-color: $white-color;
+		min-height: 100%;
+		@include radius(5px);
+		.head-top-row{
+			padding: 15px 45px;
+			border-bottom: 1px solid #f6f6f6;
+			.inner-title{
+				padding: 15px 0px;
+			}
+			.right-text{
+				padding: 15px 0;
+				@include text-format(16px,$black-color,600,$family-open);	
+				span{
+					color:$yellow;
+				}
+			}
+		}
+		.custom-table{
+			@include text-format(16px,$color-6d,600,$family-open);	
+			background-color: $color-f2;
+			th{
+				background-color: $color-f2;
+				border-bottom: 0 none;
+				padding-left:30px; 
+				padding-right:30px; 
+			}	
+			td{
+				background-color: $white-color;
+				@include text-format(14px,$color-6d,400,$family-open);
+				padding-left:30px; 
+				padding-right:30px;
+				a{
+					&.icon{
+						color: $color-6d;
+						font-size: 16px;
+						&:hover{
+							color:$yellow;
+						}
+					}
+				} 
+			}			
+		}
+		&.client-page{
+			position: relative;
+			.table-responsive{
+				margin-bottom: 80px;
+			}
+			.custom-pagination{
+				position: absolute;
+				bottom: 0;
+			}
+		}
+	}
+}
+.custom-form{
+	.from-group{	
+		margin-bottom: 15px;	
+		input.form-control ,textarea.form-control{
+			border-radius:0;
+			border-left:0 none;
+			border-right:0 none;
+			border-top:0 none;
+			padding-left: 0;
+			margin-top: 25px;
+		}		
+		label{
+			&.custom-label{
+				@include text-format(16px,$color-6d,600,$family-open);
+				@include margin-bottom(15);
+			}
+		}	
+		p{
+			&.input-data{
+				@include padding-bottom(10);
+			}
+		}	
+		.plus-minus-box{
+			@include margin-bottom(10);
+			button{
+				background-color: $color-80;
+				@include text-format(16px,$white-color,600,$family-open);
+				border:0 none;
+				@include padding(8 10);
+				cursor: pointer;
+			}
+			input{
+				border:1px solid #ced4da;
+				width:65px;
+				@include margin(0 10);				
+			}
+		}
+	}
+}
+
+.nav{
+ 	&.custom-tab{
+ 		@include padding(35 15);
+ 		li{
+ 			overflow: hidden;
+ 			&:first-child{
+ 				border-top-left-radius:30px;
+ 				border-bottom-left-radius:30px;
+ 			}
+ 			&:last-child{
+ 				border-top-right-radius:30px;
+ 				border-bottom-right-radius:30px;
+ 			}
+ 			a{
+ 				background-color: $color-d8;
+ 				@include padding(12 40);
+ 				@include text-format(14px,$color-6d,700,$family-open);
+ 				&.active , &:hover{
+ 					background-color: $yellow;
+ 					color: $white-color;
+ 				}
+ 			}
+ 		}
+	}
+}
